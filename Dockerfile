@@ -1,7 +1,7 @@
 FROM ruby:alpine
 
 RUN apk add --no-cache build-base libxml2-dev libxslt-dev \
-    && gem install nokogiri
+    && gem install nokogiri -v '1.6.7.2'
 
 RUN apk add --no-cache openssl \
     && wget -O /tmp/phantomjs-2.1.1-linux-x86_64.tar.bz2 https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2 \
