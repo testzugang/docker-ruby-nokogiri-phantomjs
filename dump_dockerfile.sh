@@ -36,8 +36,8 @@ dump_phantomjs
 
 dump_package () {
 	if [ "$os" = "alpine" ] ; then
-		# phantomjs: openssl
-		echo RUN apk add --no-cache build-base libxml2-dev libxslt-dev openssl
+		# phantomjs: openssl curl
+		echo RUN apk add --no-cache build-base libxml2-dev libxslt-dev openssl curl
 	else
 		# phantomjs: libssl-dev libfontconfig1
 		cat <<'END'
